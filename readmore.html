@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-container img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .blog-title {
+      font-size: 1.8rem;
+      color: #333;
+      margin: 15px 0;
+    }
+
+    .blog-snippet {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .read-more-btn {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .read-more-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <img src="img/banner.png" alt="Blog Image">
+    <h2 class="blog-title">The Journey to Becoming a Successful Blogger</h2>
+    <p class="blog-snippet" id="blog-content">
+      Blogging is a journey that takes passion, persistence, and creativity...
+    </p>
+    <button class="read-more-btn" id="read-more-btn" onclick="toggleContent()">
+      Read More
+    </button>
+  </div>
+
+  <script>
+    function toggleContent() {
+      const blogContent = document.getElementById('blog-content');
+      const btn = document.getElementById('read-more-btn');
+
+      if (btn.innerText === "Read More") {
+        blogContent.innerText = `
+          Blogging is a journey that takes passion, persistence, and creativity. 
+          It’s not just about writing but connecting with your audience and delivering valuable content. 
+          In this post, we explore the steps to building a successful blog, from identifying your niche to mastering SEO strategies. 
+          Whether you're a beginner or an experienced writer, there’s always room to grow in the blogging world.
+        `;
+        btn.innerText = "Read Less";
+      } else {
+        blogContent.innerText = `
+          Blogging is a journey that takes passion, persistence, and creativity...
+        `;
+        btn.innerText = "Read More";
+      }
+    }
+  </script>
+</body>
+</html>
